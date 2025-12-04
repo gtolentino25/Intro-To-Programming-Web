@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drum Kit</title>
+  <style>
+    body { font-family: sans-serif; display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; }
+    .drum { cursor: pointer; width: 200px; }
+  </style>
+</head>
+<body>
+  <img id="kick" class="drum" src="images/kick.png" alt="Kick" />
+  <img id="snare" class="drum" src="images/snare.png" alt="Snare" />
+  <img id="crash" class="drum" src="images/crash.png" alt="Crash" />
+  <img id="tom1" class="drum" src="images/tom1.png" alt="Tom 1" />
+  <img id="tom2" class="drum" src="images/tom2.png" alt="Tom 2" />
+  <img id="tom3" class="drum" src="images/tom3.png" alt="Tom 3" />
+  <img id="tom4" class="drum" src="images/tom4.png" alt="Tom 4" />
+
+<script>
+
+// Get each drum image by ID
+let kickImg = document.getElementById("kick");
+let snareImg = document.getElementById("snare");
+let crashImg = document.getElementById("crash");
+let tom1Img = document.getElementById("tom1");
+let tom2Img = document.getElementById("tom2");
+let tom3Img = document.getElementById("tom3");
+let tom4Img = document.getElementById("tom4");
+
+// Add event listeners
+kickImg.addEventListener('click', playKick);
+snareImg.addEventListener('click', playSnare);
+crashImg.addEventListener('click', playCrash);
+tom1Img.addEventListener('click', playTom1);
+tom2Img.addEventListener('click', playTom2);
+tom3Img.addEventListener('click', playTom3);
+tom4Img.addEventListener('click', playTom4);
+
+// Functions to play sounds
+function playKick() {
+    let sound = new Audio("sounds/kick-bass.mp3");
+    sound.play();
+}
+
+function playSnare() {
+    let sound = new Audio("sounds/snare.mp3");
+    sound.play();
+}
+
+function playCrash() {
+    let sound = new Audio("sounds/crash.mp3");
+    sound.play();
+}
+
+function playTom1() {
+    let sound = new Audio("sounds/tom-1.mp3");
+    sound.play();
+}
+
+function playTom2() {
+    let sound = new Audio("sounds/tom-2.mp3");
+    sound.play();
+}
+
+function playTom3() {
+    let sound = new Audio("sounds/tom-3.mp3");
+    sound.play();
+}
+
+function playTom4() {
+    let sound = new Audio("sounds/tom-4.mp3");
+    sound.play();
+}
+</script>
+
+</body>
+</html>
